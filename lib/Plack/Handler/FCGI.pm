@@ -231,9 +231,9 @@ Plack::Handler::FCGI - FastCGI handler for Plack
 
   # Roll your own
   my $server = Plack::Handler::FCGI->new(
-      nproc  => $num_proc,
-      listen => [ $port_or_socket ],
-      detach => 1,
+      nproc     => $num_proc,
+      listen    => [ $port_or_socket ],
+      daemonize => 1,
   );
   $server->run($app);
 
